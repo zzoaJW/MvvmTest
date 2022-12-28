@@ -19,52 +19,39 @@
             android:id="@+id/txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:text="@{Integer.toString(vm.currentValue)}"
             android:textColor="@color/black"
             android:textSize="100dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/main_btn_add" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:text="@{Integer.toString(vm.currentValue2)}"
             android:textColor="@color/teal_200"
             android:textSize="100dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt" />
-
-        <EditText
-            android:id="@+id/main_edittext"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="20dp"
-            android:ems="10"
-            android:hint="입력해주세요."
-            android:text=""
-            android:textColor="@color/black"
-            android:textColorHint="#CDCDCD"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/main_btn_minus" />
 
         <Button
             android:id="@+id/main_btn_add"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
             android:backgroundTint="@color/black"
             android:onClick="@{() -> vm.setValueUpDown(1)}"
             android:text="추가"
-            app:layout_constraintEnd_toEndOf="@+id/main_edittext"
-            app:layout_constraintStart_toStartOf="@+id/main_edittext"
-            app:layout_constraintTop_toBottomOf="@+id/main_edittext" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt" />
 
         <Button
             android:id="@+id/main_btn_minus"
@@ -73,21 +60,22 @@
             android:backgroundTint="@color/black"
             android:onClick="@{() -> vm.setValueUpDown(2)}"
             android:text="삭제"
-            app:layout_constraintEnd_toEndOf="@+id/main_edittext"
+            app:layout_constraintEnd_toEndOf="@+id/main_btn_add"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/main_edittext"
+            app:layout_constraintStart_toStartOf="@+id/main_btn_add"
             app:layout_constraintTop_toBottomOf="@+id/main_btn_add" />
 
         <Button
             android:id="@+id/main_btn_minus2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:backgroundTint="@color/teal_200"
             android:onClick="@{() -> vm.setValue2()}"
             android:text="현재 값 불러오기"
-            app:layout_constraintEnd_toEndOf="@+id/main_edittext"
-            app:layout_constraintStart_toStartOf="@+id/main_edittext"
-            app:layout_constraintTop_toBottomOf="@+id/main_btn_minus" />
+            app:layout_constraintEnd_toEndOf="@+id/main_btn_add"
+            app:layout_constraintStart_toStartOf="@+id/main_btn_add"
+            app:layout_constraintTop_toBottomOf="@+id/total" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
