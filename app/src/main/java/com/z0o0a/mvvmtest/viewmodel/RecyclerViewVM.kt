@@ -1,4 +1,6 @@
 package com.z0o0a.mvvmtest.viewmodel
 
-class RecyclerViewVM {
+import androidx.lifecycle.ViewModel
+
+class RecyclerViewVM : ViewModel() {
 }

@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.z0o0a.mvvmtest.R
 import com.z0o0a.mvvmtest.databinding.ActivityMainBinding
@@ -25,7 +24,17 @@ class MainActivity : AppCompatActivity() {
         binding.lifecycleOwner = this
 
         binding.btnGoFragment.setOnClickListener {
-            val intent = Intent(this, )
+            val intent = Intent(this, FragmentActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnGoCalculator.setOnClickListener {
+            val intent = Intent(this, RecyclerviewActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnGoRecyclerview.setOnClickListener {
+            val intent = Intent(this, FragmentActivity::class.java)
             startActivity(intent)
         }
     }

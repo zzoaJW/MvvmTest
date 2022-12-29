@@ -1,4 +1,6 @@
 package com.z0o0a.mvvmtest.viewmodel
 
-class FragmentVM {
+import androidx.lifecycle.ViewModel
+
+class FragmentVM : ViewModel() {
 }

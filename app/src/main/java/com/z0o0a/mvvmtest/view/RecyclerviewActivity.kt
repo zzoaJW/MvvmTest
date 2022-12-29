@@ -6,17 +6,18 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.z0o0a.mvvmtest.R
 import com.z0o0a.mvvmtest.databinding.ActivityMainBinding
-import com.z0o0a.mvvmtest.viewmodel.CalculatorVM
+import com.z0o0a.mvvmtest.databinding.RecyclerviewActivityBinding
+import com.z0o0a.mvvmtest.viewmodel.RecyclerViewVM
 
 class RecyclerviewActivity : AppCompatActivity() {
-    private lateinit var viewModel: CalculatorVM
-    private lateinit var binding : ActivityMainBinding
+    private lateinit var viewModel: RecyclerViewVM
+    private lateinit var binding : RecyclerviewActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.recyclerview_activity)
 
-        viewModel = ViewModelProvider(this).get(CalculatorVM::class.java)
+        viewModel = ViewModelProvider(this).get(RecyclerViewVM::class.java)
         binding.vm = viewModel
 
         binding.lifecycleOwner = this

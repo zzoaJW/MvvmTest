@@ -1,4 +1,6 @@
 package com.z0o0a.mvvmtest.viewmodel
 
-class CalculatorVM {
+import androidx.lifecycle.ViewModel
+
+class CalculatorVM : ViewModel() {
 }
