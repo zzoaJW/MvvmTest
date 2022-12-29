@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnGoCalculator.setOnClickListener {
-            val intent = Intent(this, RecyclerviewActivity::class.java)
+            val intent = Intent(this, CalculatorActivity::class.java)
             startActivity(intent)
         }
 

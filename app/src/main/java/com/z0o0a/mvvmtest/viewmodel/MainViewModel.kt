@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 // view model
 class MainViewModel : ViewModel() {
     // 데이터 원본
-    private val _currentValue = MutableLiveData<Int>()
+    private var _currentValue = MutableLiveData<Int>()
     private val _currentValue2 = MutableLiveData<Int>()
     init {
         _currentValue.value = 0
