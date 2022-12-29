@@ -52,4 +52,18 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
     // LiveData - 데이터의 변경 사항을 알 수 있음
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1"
+    testImplementation "com.google.truth:truth:1.0.1"
+    testImplementation 'androidx.test.ext:junit:1.1.4'
+    testImplementation "org.robolectric:robolectric:4.4"
+
+    androidTestImplementation "junit:junit:4.13.2"
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1"
+    androidTestImplementation "com.google.truth:truth:1.0.1"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 }

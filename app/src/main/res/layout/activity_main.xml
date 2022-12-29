@@ -77,6 +77,39 @@
             app:layout_constraintStart_toStartOf="@+id/main_btn_add"
             app:layout_constraintTop_toBottomOf="@+id/total" />
 
+        <Button
+            android:id="@+id/btn_go_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#CDCDCD"
+            android:text="Go Fragments"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_go_calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="#CDCDCD"
+            android:text="Go Calculator"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_go_recyclerview"
+            app:layout_constraintStart_toEndOf="@+id/btn_go_fragment" />
+
+        <Button
+            android:id="@+id/btn_go_recyclerview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#CDCDCD"
+            android:text="Go Recyclerview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
