@@ -5,7 +5,6 @@ Android Studio (Kotlin)
 주요 라이브러리 및 기술 : MVVM Pattern, AAC, lifecycle(viewmodel, livedata)
 
 [블로그 정리글]  
-
 [[Android] MVVM 패턴 구현 (1) - 기본](https://blog.naver.com/zoooa16/222959162831)
 
 [[Android] MVVM 패턴 구현 (2) - ViewModel Unit Test](https://blog.naver.com/zoooa16/222968871436)
