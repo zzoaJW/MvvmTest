@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.z0o0a.mvvmtest.R
 import com.z0o0a.mvvmtest.adapter.RecyclerviewAdapter
 import com.z0o0a.mvvmtest.databinding.ActivityMainBinding
@@ -24,9 +25,12 @@ class RecyclerviewActivity : AppCompatActivity() {
 
         binding.lifecycleOwner = this
 
-        viewModel.drinkList.observe(this, Observer {
-            RecyclerviewAdapter.setData(it)
-        })
+        val adapter = RecyclerviewAdapter()
+        binding.recyclerviewDrink.adapter = adapter
+        binding.recyclerviewDrink.layoutManager = LinearLayoutManager(applicationContext)
 
+        viewModel.getAll().observe(this, Observer {
+            adapter.setTestItemList(it)
+        })
     }
 }

@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnGoRecyclerview.setOnClickListener {
-            val intent = Intent(this, FragmentActivity::class.java)
+            val intent = Intent(this, RecyclerviewActivity::class.java)
             startActivity(intent)
         }
     }
