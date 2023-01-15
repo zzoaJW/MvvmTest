@@ -14,5 +14,73 @@
         android:layout_height="match_parent"
         android:background="@color/white">
 
+        <EditText
+            android:id="@+id/edittext_drink_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingHorizontal="20dp"
+            android:backgroundTint="@color/black"
+            android:singleLine="true"
+            android:text="@={vm.inputName}"
+            android:textColor="@color/black"
+            android:hint="술 이름"
+            android:textColorHint="#CDCDCD"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edittext_drink_vintage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/black"
+            android:hint="빈티지"
+            android:paddingHorizontal="20dp"
+            android:singleLine="true"
+            android:text="@={vm.inputVintage}"
+            android:textColor="@color/black"
+            android:textColorHint="#CDCDCD"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_drink_name" />
+
+        <Button
+            android:id="@+id/btn_drink_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="술 추가"
+            android:onClick="@{()->vm.addDrink()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_drink_vintage" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="#CDCDCD"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_drink_add" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_drink"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
