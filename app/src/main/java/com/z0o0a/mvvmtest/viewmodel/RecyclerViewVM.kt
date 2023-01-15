@@ -16,13 +16,11 @@ class RecyclerViewVM : ViewModel() {
     init {
         _inputName.value = ""
         _inputVintage.value = ""
-        items = arrayListOf(Drink("이름이름", "700"))
+        items = arrayListOf()
         _drinkList.value = items
     }
 
     // Getter (무결성을 위하여)
-//    val inputName : LiveData<String> get() = _inputName
-//    val inputVintage : LiveData<String> get() = _inputVintage
     val drinkList: LiveData<ArrayList<Drink>> get() = _drinkList
 
     // Setter

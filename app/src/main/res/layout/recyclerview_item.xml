@@ -12,7 +12,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#9FA8DA">
+        android:background="#9FA8DA"
+        android:layout_marginVertical="5dp">
 
         <TextView
             android:id="@+id/txt_drink_name"

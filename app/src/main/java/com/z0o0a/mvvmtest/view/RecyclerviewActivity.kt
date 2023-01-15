@@ -27,10 +27,11 @@ class RecyclerviewActivity : AppCompatActivity() {
 
         val adapter = RecyclerviewAdapter()
         binding.recyclerviewDrink.adapter = adapter
+
         binding.recyclerviewDrink.layoutManager = LinearLayoutManager(applicationContext)
 
         viewModel.getAll().observe(this, Observer {
-            adapter.setTestItemList(it)
+            adapter.setDrinkList(it)
         })
     }
 }
