@@ -15,3 +15,5 @@ Android Studio (Kotlin)
 [[Android] MVVM 패턴 구현 (4) - 양방향 바인딩](https://blog.naver.com/zoooa16/222969767549)
 
 [[Android] MVVM 패턴 구현 (5) - Recyclerview](https://blog.naver.com/zoooa16/222969788904)
+
+[[Android] MVVM 패턴 구현 (5) - Room](https://blog.naver.com/zoooa16/222990150937)
