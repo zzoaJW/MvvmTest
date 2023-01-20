@@ -30,7 +30,6 @@ class RecyclerviewAdapter: RecyclerView.Adapter<RecyclerviewAdapter.DrinkViewHol
     inner class DrinkViewHolder(val binding: RecyclerviewItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(currentDrink : Drink) {
             binding.drink = currentDrink
-
         }
     }
 
