@@ -1,12 +1,15 @@
 package com.z0o0a.mvvmtest.viewmodel
 
+import android.app.Application
 import androidx.databinding.InverseMethod
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.z0o0a.mvvmtest.model.Drink
+import com.z0o0a.mvvmtest.model.DrinkTableRepository
 
 class RecyclerViewVM : ViewModel() {
+
     // 데이터 원본
     var _inputName = MutableLiveData<String>()
     var _inputVintage = MutableLiveData<String>()
