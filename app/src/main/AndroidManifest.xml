@@ -21,6 +21,7 @@
         <activity android:name=".view.FragmentActivity"/>
         <activity android:name=".view.CalculatorActivity"/>
         <activity android:name=".view.RecyclerviewActivity"/>
+        <activity android:name=".view.DrinkInfo"/>
     </application>
 
 </manifest>

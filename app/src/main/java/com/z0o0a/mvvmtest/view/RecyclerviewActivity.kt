@@ -31,6 +31,8 @@ class RecyclerviewActivity : AppCompatActivity() {
         viewModel.getAll().observe(this, Observer {
             adapter.setDrinkList(it)
         })
+
+
     }
 
     private fun initRecyclerView(){
