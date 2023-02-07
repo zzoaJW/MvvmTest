@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class DrinkTable (
+data class DrinkData (
     @PrimaryKey(autoGenerate = true) var id :Int,
     var drinkName: String,
     var drinkVintage: String
