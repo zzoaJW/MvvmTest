@@ -17,3 +17,5 @@ Android Studio (Kotlin)
 [[Android] MVVM 패턴 구현 (5) - Recyclerview](https://blog.naver.com/zoooa16/222969788904)
 
 [[Android] MVVM 패턴 구현 (6) - Room](https://blog.naver.com/zoooa16/222990150937)
+
+[[Android] MVVM 패턴 구현 (7) - Recyclerview 아이템 클릭](https://blog.naver.com/zoooa16/223008461298)

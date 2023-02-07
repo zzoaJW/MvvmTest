@@ -1,5 +1,6 @@
 package com.z0o0a.mvvmtest.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -7,6 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.z0o0a.mvvmtest.R
+import com.z0o0a.mvvmtest.adapter.OnClickListener
 import com.z0o0a.mvvmtest.adapter.RecyclerviewAdapter
 import com.z0o0a.mvvmtest.databinding.ActivityMainBinding
 import com.z0o0a.mvvmtest.databinding.RecyclerviewActivityBinding
@@ -36,7 +38,12 @@ class RecyclerviewActivity : AppCompatActivity() {
     }
 
     private fun initRecyclerView(){
-        adapter = RecyclerviewAdapter()
+        val clickListener = OnClickListener{
+            intent = Intent(this, DrinkInfo::class.java)
+            startActivity(intent)
+        }
+
+        adapter = RecyclerviewAdapter(clickListener)
         binding.recyclerviewDrink.adapter = adapter
         binding.recyclerviewDrink.layoutManager = LinearLayoutManager(applicationContext)
     }

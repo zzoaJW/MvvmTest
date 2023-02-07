@@ -10,7 +10,7 @@ import com.z0o0a.mvvmtest.databinding.RecyclerviewItemBinding
 import com.z0o0a.mvvmtest.model.Drink
 import com.z0o0a.mvvmtest.model.DrinkData
 
-class RecyclerviewAdapter: RecyclerView.Adapter<RecyclerviewAdapter.DrinkViewHolder>(){
+class RecyclerviewAdapter(private val clickListener: OnClickListener): RecyclerView.Adapter<RecyclerviewAdapter.DrinkViewHolder>(){
     private var drinkList = ArrayList<DrinkData>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DrinkViewHolder {
@@ -21,8 +21,11 @@ class RecyclerviewAdapter: RecyclerView.Adapter<RecyclerviewAdapter.DrinkViewHol
     override fun onBindViewHolder(holder: DrinkViewHolder, position: Int) {
         holder.bind(drinkList[position])
 
-        holder.binding.btnDrinkDel.setOnClickListener {
-            delDrink(position)
+//        holder.binding.btnDrinkDel.setOnClickListener {
+//            delDrink(position)
+//        }
+        holder.itemView.setOnClickListener {
+            clickListener.onClick(drinkList[position])
         }
     }
 
@@ -45,4 +48,8 @@ class RecyclerviewAdapter: RecyclerView.Adapter<RecyclerviewAdapter.DrinkViewHol
         drinkList.addAll(drinks)
         notifyDataSetChanged()
     }
+}
+
+class OnClickListener(val clickListener: (drinkData: DrinkData) -> Unit) {
+    fun onClick(drinkData: DrinkData) = clickListener(drinkData)
 }
