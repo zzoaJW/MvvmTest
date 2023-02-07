@@ -15,6 +15,7 @@ import com.z0o0a.mvvmtest.viewmodel.RecyclerViewVM
 class RecyclerviewActivity : AppCompatActivity() {
     private lateinit var viewModel: RecyclerViewVM
     private lateinit var binding : RecyclerviewActivityBinding
+    private lateinit var adapter: RecyclerviewAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,13 +26,16 @@ class RecyclerviewActivity : AppCompatActivity() {
 
         binding.lifecycleOwner = this
 
-        val adapter = RecyclerviewAdapter()
-        binding.recyclerviewDrink.adapter = adapter
-
-        binding.recyclerviewDrink.layoutManager = LinearLayoutManager(applicationContext)
+        initRecyclerView()
 
         viewModel.getAll().observe(this, Observer {
             adapter.setDrinkList(it)
         })
+    }
+
+    private fun initRecyclerView(){
+        adapter = RecyclerviewAdapter()
+        binding.recyclerviewDrink.adapter = adapter
+        binding.recyclerviewDrink.layoutManager = LinearLayoutManager(applicationContext)
     }
 }

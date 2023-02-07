@@ -15,21 +15,21 @@ class DrinkRepository (application: Application) {
     }
 
     fun insert(drinkData : DrinkData){
-//        try {
-//            val thread = Thread(Runnable {
+        try {
+            val thread = Thread(Runnable {
                 drinkDao.insert(drinkData)
-//            })
-//            thread.start()
-//        } catch (e : Exception){e.printStackTrace()}
+            })
+            thread.start()
+        } catch (e : Exception){e.printStackTrace()}
     }
 
     fun delete(drinkData: DrinkData) {
-//        try {
-//            val thread = Thread(Runnable {
+        try {
+            val thread = Thread(Runnable {
                 drinkDao.delete(drinkData)
-//            })
-//            thread.start()
-//        } catch (e : Exception){e.printStackTrace()}
+            })
+            thread.start()
+        } catch (e : Exception){e.printStackTrace()}
     }
 
     fun update(drinkData: DrinkData) {

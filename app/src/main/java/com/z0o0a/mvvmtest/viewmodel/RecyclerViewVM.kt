@@ -18,12 +18,12 @@ class RecyclerViewVM(application: Application) : AndroidViewModel(application) {
 //    private val _drinkList = MutableLiveData<ArrayList<Drink>>()
 //    private var items = ArrayList<Drink>()
 
-//    init {
-//        _inputName.value = ""
-//        _inputVintage.value = ""
+    init {
+        _inputName.value = ""
+        _inputVintage.value = ""
 //        items = arrayListOf()
 //        _drinkList.value = items
-//    }
+    }
 //
 //    // Getter (무결성을 위하여)
 //    val drinkList: LiveData<ArrayList<Drink>> get() = _drinkList
@@ -38,8 +38,8 @@ class RecyclerViewVM(application: Application) : AndroidViewModel(application) {
 //        return drinkList
 //    }
 
-    fun insert(drinkData : DrinkData){
-        repo.insert(drinkData)
+    fun insert(){
+        repo.insert(DrinkData(0, _inputName.value!!, _inputVintage.value!!))
     }
 
     fun delete(drinkData : DrinkData){

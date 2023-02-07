@@ -6,7 +6,7 @@
     <data>
         <variable
             name="drink"
-            type="com.z0o0a.mvvmtest.model.Drink" />
+            type="com.z0o0a.mvvmtest.model.DrinkData" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
